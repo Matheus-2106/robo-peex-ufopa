@@ -1,3 +1,4 @@
+// Resolução
 $fa = 1;
 $fs = 0.04;
 
@@ -40,7 +41,7 @@ alt_cab     = comp_cab*0.7;
 num_sec     = 6;
 comp_braco  = 10;
 diam_braco  = 2;
-ang_braco_dir = [-30,0,-30];
+ang_braco_dir = [-30,0,-30];  // Ângulos em graus
 ang_antebraco_dir = [-30,0,0];
 ang_braco_esq = [-30,0,-30];
 ang_antebraco_esq = [45,0,0];   
