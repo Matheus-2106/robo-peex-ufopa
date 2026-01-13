@@ -2,6 +2,10 @@
 
 Modelo 3D de robô mascote do projeto Cultura Maker vinculado ao Laboratório de Modelagem Computacional (LabMC) da Universidade Federal do Oeste do Pará (UFOPA).
 
+| Referência para o modelo 3D |
+| --------- |
+| ![Referência](imagens/robo-peex-referencia.png) |
+
 ## Pré-requisitos
 
 - [OpenSCAD](https://openscad.org/)
@@ -25,6 +29,7 @@ Modelo 3D de robô mascote do projeto Cultura Maker vinculado ao Laboratório de
 
 1. Abra o arquivo _robo_peex.scad_ no diretório _modelos_ utilizando o _OpenSCAD_
 2. Sinta-se livre para modificar os valores das variáveis para alterar as medidas do modelo
+3. Para pré-visualizar o modelo, utilize a função _Preview_ em _Design > Preview_ ou utilize o atalho _F5_
 
 ### Gerando arquivo STL para impressão 3D
 
@@ -32,6 +37,10 @@ Modelo 3D de robô mascote do projeto Cultura Maker vinculado ao Laboratório de
 2. Exporte o arquivo como um STL em _File > Export > Export as STL..._ ou use o atalho _F7_
 
    - NOTA: Ao renderizar, as cores serão descartadas, pois STL não possui suporte para cores
+
+| Pré-visualização | Renderizado |
+|------------------|-------------|
+| ![Pré-visualização do modelo 3D](imagens/robo-peex-modelo-preview.png) | ![Modelo 3D renderizado](imagens/robo-peex-modelo-render.png) |
 
 ## Licença
 
