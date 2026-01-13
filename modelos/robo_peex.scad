@@ -40,10 +40,10 @@ alt_cab     = comp_cab*0.7;
 num_sec     = 6;
 comp_braco  = 10;
 diam_braco  = 2;
-ang_braco_dir = [45,0,-45];
-ang_antebraco_dir = [30,0,0];
-ang_braco_esq = [30,0,0];
-ang_antebraco_esq = [-45,0,-45];   
+ang_braco_dir = [-30,0,-30];
+ang_antebraco_dir = [-30,0,0];
+ang_braco_esq = [-30,0,-30];
+ang_antebraco_esq = [45,0,0];   
 
 // Medidas da articulação do braço
 diam_art   = diam_braco;
@@ -90,10 +90,9 @@ module base(_comp_base, _larg_base, _alt_base) {
             texto(texto_y, cor_branco, tam_texto_y);
         
     // Texto ao longo do eixo z
-    translate([_comp_base/4,0,0])
+    translate([_comp_base/4,0,_alt_base/2])
         rotate([0,0,90])
-            espelha_texto(_alt_base)
-                texto(texto_z, cor_branco, tam_texto_z);
+            texto(texto_z, cor_branco, tam_texto_z);
     
     /*translate([0,0,_alt_base/2])
         color(cor_branco)
@@ -259,10 +258,10 @@ module robo() {
         cabeca(comp_cab, larg_cab, alt_cab);
     // Braços
     translate([-comp_corpo/2,larg_corpo/2,(alt_base/2 + 4*alt_corpo/5)])
-        braco_completo(ang_braco_dir, ang_antebraco_dir);
+        braco_completo(ang_braco_esq, ang_antebraco_esq);
     translate([-comp_corpo/2,-larg_corpo/2,(alt_base/2 + 4*alt_corpo/5)])
         rotate([180,0,0])
-            braco_completo(ang_braco_esq, ang_antebraco_esq);
+            braco_completo(ang_braco_dir, ang_antebraco_dir);
 }
 
 scale(escala)
@@ -280,7 +279,7 @@ scale(escala)
 //boca(diam_boca);
 //orelha(diam_orelha);
 //articulacao_braco(diam_art);
-//braco_completo(ang_braco_dir, ang_antebraco_dir);
+//braco_completo(ang_braco_esq, ang_antebraco_esq);
 //braco_articulado();
-//texto(texto_x, cor_branco, tam_texto_x);
+//texto(texto_z, cor_branco, tam_texto_z);
 //espelha_texto(10) texto(texto_z, cor_azul, tam_texto_z);
